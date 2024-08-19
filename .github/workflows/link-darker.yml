@@ -18,7 +18,8 @@
             with:
                 python-version: '3.8'  # Specify the desired Python version, e.g., '3.8'
           
-          - uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
+          # - uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
+          - uses: akaihola/darker@2.1.1
             with:
                 options: "--check --diff --isort --color"
                 src: "."
