@@ -1,9 +1,7 @@
 # Validate python code
-import json
-import os
 import date
 
 def hello_world():
-    print("Hello, darker sample test1")
+    print("Hello, darker sample test2")
 
 hello_world()
