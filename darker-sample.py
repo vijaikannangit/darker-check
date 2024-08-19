@@ -1,8 +1,7 @@
 # Validate python code
-import date
 import request
 
 def hello_world():
-    print("Hello, darker sample test2")
+    print("Hello, darker sample test3")
 
 hello_world()
