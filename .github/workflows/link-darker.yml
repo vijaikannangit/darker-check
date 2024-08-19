@@ -13,13 +13,14 @@
           - uses: actions/checkout@v4
             with:
               fetch-depth: 0
+
           - uses: actions/setup-python@v5
             with:
-              python-version: '3.8'  # Specify the desired Python version, e.g., '3.8'              
-          - uses: actions/setup-python@v5
+                python-version: '3.8'  # Specify the desired Python version, e.g., '3.8'
+          
           - uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
             with:
-              options: "--check --diff --isort --color"
-              src: "."
-              version: "~=2.1.1"
-              lint: "flake8,pylint==2.13.1"
+                options: "--check --diff --isort --color"
+                src: "."
+                version: "~=2.1.1"
+                lint: "flake8,pylint==2.13.1"
