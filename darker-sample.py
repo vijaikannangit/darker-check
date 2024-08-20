@@ -1,5 +1,4 @@
 # Validate python code
-import datetime
 import date
 import math
 import random
