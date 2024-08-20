@@ -9,3 +9,4 @@ def hello_world():
 
 hello_world()
 print("Just 1")
+print("Just 2")
