@@ -42,8 +42,18 @@ jobs:
         with:
             options: "--check --diff --isort --color"
             src: ${{ env.CHANGED_FILES }}
-            lint: "flake8,pylint==2.13.1"
+            # lint: "flake8,pylint==2.13.1"
         continue-on-error: true
+
+      - name: Run Flake8 and Pylint Linters
+        if: always()
+        run: |
+          if [ -n "${{ env.CHANGED_FILES }}" ]; then
+            flake8 ${{ env.CHANGED_FILES }}
+            pylint ${{ env.CHANGED_FILES }}
+          else
+            echo "No Python files to lint with Flake8 or Pylint."
+          fi
 
     #   - name: Run Flake8 Linter
     #     if: always()
