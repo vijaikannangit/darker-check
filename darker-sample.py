@@ -1,6 +1,5 @@
 # Validate python code
-import math
-import os 
+import math 
 import datetime
 import date
 
