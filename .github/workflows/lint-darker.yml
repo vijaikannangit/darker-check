@@ -1,4 +1,4 @@
-name: Lint Darker - Validate Python Code
+name: Lint Darker - Validate Python Codes
 
 on: [pull_request]
 
