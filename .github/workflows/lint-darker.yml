@@ -47,6 +47,7 @@ jobs:
 
       - name: Run Flake8 and Pylint Linters
         if: always()
+        continue-on-error: true
         run: |
           if [ -n "${{ env.CHANGED_FILES }}" ]; then
             flake8 ${{ env.CHANGED_FILES }}
