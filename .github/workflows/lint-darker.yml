@@ -43,7 +43,7 @@ jobs:
             options: "--check --diff --isort --color"
             src: ${{ env.CHANGED_FILES }}
             lint: "flake8,pylint==2.13.1"
-        continue-on-error: true'
+        continue-on-error: true
 
     #   - name: Run Flake8 Linter
     #     if: always()
