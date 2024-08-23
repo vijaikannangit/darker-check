@@ -27,12 +27,17 @@
             else
               echo "range=${{ github.event.before }}..${{ github.sha }}" >> $GITHUB_ENV
             fi
-                        
+
+        - name: Debug Commit Range
+          run: |
+              echo "Commit range: ${{ env.range }}"
+
         - name: Run Darker
         # uses: akaihola/darker@v2.1.1
           uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
           with:
-              options: "--check --diff --isort --color -r ${{ env.range }}"
+            #   options: "--check --diff --isort --color -r ${{ env.range }}"
+              options: "--check --diff --isort --color"
               src: "."
               version: "~=2.1.1"
               lint: "flake8,pylint==2.13.1"
