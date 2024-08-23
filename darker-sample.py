@@ -1,5 +1,5 @@
 # Validate python code
-import date
+import random
 import math
 import random
 
@@ -12,3 +12,5 @@ print("Just 1")
 print("Just 2")
 print("Just 2")   
 print("Just 4")   
+print("Just 5")  
+print("Just 6) 
