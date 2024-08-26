@@ -32,6 +32,15 @@
           run: |
               echo "Commit range: ${{ env.range }}"
 
+        - name: Debug Event Values
+          run: |
+            echo "Event before: ${{ github.event.before }}"
+            echo "Event SHA: ${{ github.sha }}"
+
+        - name: Debug GITHUB_ENV
+          run: |
+              cat $GITHUB_ENV
+
         - name: Run Darker
           id: run_darker
         #   uses: akaihola/darker@v2.1.1
