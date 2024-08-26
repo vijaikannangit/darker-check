@@ -23,6 +23,12 @@
           run: |
             pip install darker~=2.1.1 flake8 pylint==2.13.1
 
+        - name: Verify Installation
+          run: |
+              pip show darker
+              which darker
+              echo $PATH
+
         - name: Determine commit range
           id: commit_range
           run: |
