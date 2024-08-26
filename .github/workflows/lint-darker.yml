@@ -20,7 +20,7 @@
             python-version: '3.x'          
 
         - name: Determine commit range
-          id: commit_range
+          id: commit_range ???????
           run: |
             if [ "${{ github.event_name }}" == "push" ]; then
               echo "range=HEAD~1..HEAD" >> $GITHUB_ENV
@@ -33,15 +33,15 @@
               echo "Commit range: ${{ env.range }}"
 
         - name: Run Darker
-        # uses: akaihola/darker@v2.1.1
-          uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
+          uses: akaihola/darker@v2.1.1
+        #   uses: akaihola/darker@acb622567d1a26b0c6dcbb1b171c1c8340ee6c22
           with:
             #   options: "--check --diff --isort --color -r ${{ env.range }}"
               options: "--check --diff --isort --color"
               src: "."
               version: "~=2.1.1"
             #   lint: "flake8,pylint==2.13.1"
-              lint: "ruff"
+              lint: "ruffe"
 
 
               
