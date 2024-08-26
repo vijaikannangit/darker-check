@@ -19,6 +19,10 @@
           with:
             python-version: '3.x'          
 
+        - name: Install Darker and linters
+          run: |
+            pip install darker~=2.1.1 flake8 pylint==2.13.1
+
         - name: Determine commit range
           id: commit_range
           run: |
